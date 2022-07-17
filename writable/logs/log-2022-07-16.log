@@ -1,0 +1,40 @@
+ERROR - 2022-07-16 12:18:01 --> Error connecting to the database: Access denied for user ''@'localhost' (using password: NO)
+ERROR - 2022-07-16 12:19:38 --> Error connecting to the database: Unknown database 'perbakal'
+CRITICAL - 2022-07-16 12:35:43 --> You must be an administrator to view this page.
+in ROOTPATH\CodeIgniter-Ion-Auth\Controllers\Auth.php on line 99.
+ 1 SYSTEMPATH\CodeIgniter.php(896): IonAuth\Controllers\Auth->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(IonAuth\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-16 12:36:50 --> You must be an administrator to view this page.
+in ROOTPATH\CodeIgniter-Ion-Auth\Controllers\Auth.php on line 99.
+ 1 SYSTEMPATH\CodeIgniter.php(896): IonAuth\Controllers\Auth->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(IonAuth\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-16 12:37:01 --> You must be an administrator to view this page.
+in ROOTPATH\CodeIgniter-Ion-Auth\Controllers\Auth.php on line 99.
+ 1 SYSTEMPATH\CodeIgniter.php(896): IonAuth\Controllers\Auth->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(IonAuth\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-16 13:18:04 --> syntax error, unexpected token "}", expecting ";"
+in ROOTPATH\CodeIgniter-Ion-Auth\Controllers\Auth.php on line 101.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('ROOTPATH\\CodeIgniter-Ion-Auth\\Controllers\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('IonAuth\\Controllers\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('IonAuth\\Controllers\\Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\IonAuth\\Controllers\\Auth', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-16 13:18:46 --> Call to undefined method IonAuth\Controllers\Auth::redirect()
+in ROOTPATH\CodeIgniter-Ion-Auth\Controllers\Auth.php on line 100.
+ 1 SYSTEMPATH\CodeIgniter.php(896): IonAuth\Controllers\Auth->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(IonAuth\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

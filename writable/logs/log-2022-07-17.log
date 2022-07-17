@@ -1,0 +1,19 @@
+ERROR - 2022-07-17 01:58:59 --> Error connecting to the database: Unknown database 'perbakal'
+CRITICAL - 2022-07-17 01:58:59 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'perbakal'
+in SYSTEMPATH\Database\BaseConnection.php on line 416.
+ 1 SYSTEMPATH\Database\BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `email`, `email`, `id`, `password`, `active`, `last_login`
+FROM `users`
+WHERE `email` = :email:
+ORDER BY `id` DESC
+ LIMIT 1', [...], false)
+ 3 ROOTPATH\CodeIgniter-Ion-Auth\Models\IonAuthModel.php(898): CodeIgniter\Database\BaseBuilder->get()
+ 4 [internal function]: IonAuth\Models\IonAuthModel->login('hiski46@gmail.com', '12345678', false)
+ 5 ROOTPATH\CodeIgniter-Ion-Auth\Libraries\IonAuth.php(104): call_user_func_array([...], [...])
+ 6 ROOTPATH\CodeIgniter-Ion-Auth\Controllers\Auth.php(133): IonAuth\Libraries\IonAuth->__call('login', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): IonAuth\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(IonAuth\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
