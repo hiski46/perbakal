@@ -43,7 +43,7 @@ class Autoload extends AutoloadConfig
     public $psr4 = [
         APP_NAMESPACE => APPPATH, // For custom app namespace
         'Config'      => APPPATH . 'Config',
-        'IonAuth'     => ROOTPATH . 'CodeIgniter-Ion-Auth',
+        'IonAuth'     => ROOTPATH . 'Ion-Auth',
         'Modules'     => ROOTPATH . 'Modules',
     ];
 
