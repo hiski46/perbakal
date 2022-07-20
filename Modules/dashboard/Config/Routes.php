@@ -10,3 +10,7 @@ $routes->group('dashboard', ['namespace' => 'Modules\dashboard\Controllers'], fu
     // $routes->put('procurement/(:any)', 'MaterialRequest::$1', ['namespace' => 'Procurement\Controllers']);
     // $routes->get('procurement_settings', 'Procurement_settings::index', ['namespace' => 'Procurement\Controllers']);
 });
+$routes->group('baner', ['namespace' => 'Modules\dashboard\Controllers'], function ($routes) {
+    $routes->get('/', 'Baner::index');
+    $routes->get('(:any)', 'Baner::$1');
+});

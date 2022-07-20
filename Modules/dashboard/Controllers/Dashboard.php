@@ -28,11 +28,23 @@ class Dashboard extends BaseController
         $this->rander(view("$this->view\dashboard"));
     }
 
-    public function baner()
+    public function modal($title, $isi, $aksi, $warna, $tombol, $size = NULL)
     {
-        if (!$this->ionAuth->loggedIn()) {
-            return redirect()->to('/auth/login');
-        }
-        $this->rander(view("$this->view\content\baner"));
+        $html = '<div class="modal-dialog ' . $size . '">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">' . $title . '</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">' .
+            $isi
+            . '</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button onclick="' . $aksi . '" type="button" class="btn btn-' . $warna . '">' . $tombol . '</button>
+            </div>
+        </div>
+    </div>';
+        return $html;
     }
 }
