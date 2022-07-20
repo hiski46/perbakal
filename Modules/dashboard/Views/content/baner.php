@@ -1,20 +1,36 @@
-<h1 class="mt-4">Static Navigation</h1>
+<h1 class="mt-4">Baner</h1>
 <ol class="breadcrumb mb-4">
     <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-    <li class="breadcrumb-item active">Static Navigation</li>
+    <li class="breadcrumb-item active">Baner</li>
 </ol>
 <div class="card mb-4">
+    <div class="ms-3 mt-3">
+        <div class="row">
+            <div class="col-6">
+                <h3 class="card-title"><i class="fa-solid fa-image"></i>List Baner</h3>
+            </div>
+            <div class="col-6">
+                <div class="text-end me-4"><button class="btn btn-primary"><i class="fa-solid fa-folder-plus"></i> Tambah</button></div>
+            </div>
+        </div>
+    </div>
     <div class="card-body">
-        <p class="mb-0">
-            This page is an example of using static navigation. By removing the
-            <code>.sb-nav-fixed</code>
-            class from the
-            <code>body</code>
-            , the top navigation and side navigation will become static on scroll. Scroll down this page to see an example.
-        </p>
+        <table id="table-baner">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Gambar</th>
+                    <th>Text</th>
+                </tr>
+            </thead>
+        </table>
     </div>
 </div>
-<div style="height: 100vh"></div>
-<div class="card mb-4">
-    <div class="card-body">When scrolling, the navigation stays at the top of the page. This is the end of the static navigation demo.</div>
-</div>
+
+<script>
+    $(document).ready(function() {
+        $('#table-baner').DataTable({
+            searching: false,
+        })
+    })
+</script>
