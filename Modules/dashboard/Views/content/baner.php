@@ -26,7 +26,6 @@
         </table>
     </div>
 </div>
-
 <div class="modal" tabindex="-1">
 
 </div>
@@ -34,15 +33,16 @@
 
 <script>
     $(document).ready(function() {
+
+
         $('#table-baner').DataTable({
             searching: false,
         })
-
-
     })
     // $('[name="file_baner"]').click(function() {
     //     console.log('asdaksas');
     // })
+
 
     function previewFile(input) {
         const file = input.files[0];
@@ -66,5 +66,9 @@
                 $('.modal').modal('show');
             }
         })
+    }
+
+    function save() {
+        $('#baner-form').submit()
     }
 </script>
