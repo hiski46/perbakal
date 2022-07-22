@@ -1,0 +1,302 @@
+ERROR - 2022-07-19 09:13:43 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2022-07-19 09:13:43 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 416.
+ 1 SYSTEMPATH\Database\BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `email`, `email`, `id`, `password`, `active`, `last_login`
+FROM `users`
+WHERE `email` = :email:
+ORDER BY `id` DESC
+ LIMIT 1', [...], false)
+ 3 ROOTPATH\CodeIgniter-Ion-Auth\Models\IonAuthModel.php(898): CodeIgniter\Database\BaseBuilder->get()
+ 4 [internal function]: IonAuth\Models\IonAuthModel->login('hiski@mail.com', '123123', false)
+ 5 ROOTPATH\CodeIgniter-Ion-Auth\Libraries\IonAuth.php(104): call_user_func_array([...], [...])
+ 6 ROOTPATH\CodeIgniter-Ion-Auth\Controllers\Auth.php(133): IonAuth\Libraries\IonAuth->__call('login', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): IonAuth\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(IonAuth\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-07-19 09:13:59 --> Error connecting to the database: Unknown database 'perbakal'
+CRITICAL - 2022-07-19 09:13:59 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'perbakal'
+in SYSTEMPATH\Database\BaseConnection.php on line 416.
+ 1 SYSTEMPATH\Database\BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `email`, `email`, `id`, `password`, `active`, `last_login`
+FROM `users`
+WHERE `email` = :email:
+ORDER BY `id` DESC
+ LIMIT 1', [...], false)
+ 3 ROOTPATH\CodeIgniter-Ion-Auth\Models\IonAuthModel.php(898): CodeIgniter\Database\BaseBuilder->get()
+ 4 [internal function]: IonAuth\Models\IonAuthModel->login('hiski@mail.com', '123123', false)
+ 5 ROOTPATH\CodeIgniter-Ion-Auth\Libraries\IonAuth.php(104): call_user_func_array([...], [...])
+ 6 ROOTPATH\CodeIgniter-Ion-Auth\Controllers\Auth.php(133): IonAuth\Libraries\IonAuth->__call('login', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): IonAuth\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(IonAuth\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 09:21:14 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('ROOTPATH\\public')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(22): redirect('http://localhost:8080/Auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 09:21:33 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('ROOTPATH\\public')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(22): redirect('http://localhost:8080/Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 09:21:34 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('ROOTPATH\\public')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(22): redirect('http://localhost:8080/Auth')
+ 4 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 09:21:49 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('ROOTPATH\\public')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(22): redirect('http://localhost:8080/auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 09:21:50 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('ROOTPATH\\public')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(22): redirect('http://localhost:8080/auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 09:21:51 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('ROOTPATH\\public')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(22): redirect('http://localhost:8080/auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 09:22:02 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('ROOTPATH\\public')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(22): redirect('http://localhost:8080/auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 09:22:46 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('ROOTPATH\\public')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(22): redirect('http://localhost:8080/auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 09:22:47 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('ROOTPATH\\public')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(22): redirect('http://localhost:8080/auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 09:22:53 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('ROOTPATH\\public')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(22): redirect('http://localhost:8080/auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 09:23:17 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('ROOTPATH\\public')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(22): redirect('http://localhost:8080/auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 09:23:18 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('ROOTPATH\\public')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(22): redirect('http://localhost:8080/auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 09:41:49 --> syntax error, unexpected token "}", expecting ";"
+in ROOTPATH\Modules\dashboard\Controllers\Dashboard.php on line 24.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('ROOTPATH\\Modules\\dashboard\\Controllers\\Dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\dashboard\\Controllers\\Dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\dashboard\\Controllers\\Dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\Modules\\dashboard\\Controllers\\Dashboard', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 09:42:03 --> Object of class CodeIgniter\HTTP\RedirectResponse could not be converted to string
+in ROOTPATH\Modules\dashboard\Controllers\Dashboard.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 09:45:10 --> syntax error, unexpected token "}"
+in ROOTPATH\Modules\dashboard\Controllers\Dashboard.php on line 19.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('ROOTPATH\\Modules\\dashboard\\Controllers\\Dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\dashboard\\Controllers\\Dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\dashboard\\Controllers\\Dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\Modules\\dashboard\\Controllers\\Dashboard', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 09:45:22 --> Object of class CodeIgniter\HTTP\RedirectResponse could not be converted to string
+in ROOTPATH\Modules\dashboard\Controllers\Dashboard.php on line 25.
+ 1 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(18): Modules\dashboard\Controllers\Dashboard->cekLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 10:15:27 --> Invalid file: http://localhost:8080/Modules/dashboard/Views/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('http://localhost:8080/Modules/dashboard/Views/index.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('http://localhost:8080/Modules/dashboard/Views/index', [], true)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(24): view('http://localhost:8080/Modules/dashboard/Views/index')
+ 4 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 10:19:23 --> Invalid file: http://localhost:8080/Modules/dashboard/Views/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('http://localhost:8080/Modules/dashboard/Views/index.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('http://localhost:8080/Modules/dashboard/Views/index', [], true)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(24): view('http://localhost:8080/Modules/dashboard/Views/index')
+ 4 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 10:19:58 --> Invalid file: http://localhost:8080/index.php/Modules/dashboard/Views/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('http://localhost:8080/index.php/Modules/dashboard/Views/index.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('http://localhost:8080/index.php/Modules/dashboard/Views/index', [], true)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(24): view('http://localhost:8080/index.php/Modules/dashboard/Views/index')
+ 4 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 10:21:18 --> Invalid file: http://localhost:8080/dashboard/Views/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('http://localhost:8080/dashboard/Views/index.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('http://localhost:8080/dashboard/Views/index', [], true)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(24): view('http://localhost:8080/dashboard/Views/index')
+ 4 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 10:25:04 --> Invalid file: Modules/dashboard/Views/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Modules/dashboard/Views/index.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Modules/dashboard/Views/index', [], true)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(24): view('Modules/dashboard/Views/index')
+ 4 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 10:25:06 --> Invalid file: Modules/dashboard/Views/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Modules/dashboard/Views/index.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Modules/dashboard/Views/index', [], true)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(24): view('Modules/dashboard/Views/index')
+ 4 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 11:06:40 --> Invalid file: dashboard\Views\index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard\\Views\\index.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('dashboard\\Views\\index', [], true)
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Modules\\dashboard\\Views\\content\\baner', [], true)
+ 4 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(24): view('Modules\\dashboard\\Views\\content\\baner')
+ 5 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 11:19:32 --> Invalid file: Modules\dashboard\Viewsander.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Modules\\dashboard\\Viewsander.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Modules\\dashboard\\Viewsander', [], true)
+ 3 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(50): view('Modules\\dashboard\\Viewsander', [...])
+ 4 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(44): Modules\dashboard\Controllers\Dashboard->rander('<h1 class="mt-4">Static Navigation</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+    <li class="breadcrumb-item active">Static Navigation</li>
+</ol>
+<div class="card mb-4">
+    <div class="card-body">
+        <p class="mb-0">
+            This page is an example of using static navigation. By removing the
+            <code>.sb-nav-fixed</code>
+            class from the
+            <code>body</code>
+            , the top navigation and side navigation will become static on scroll. Scroll down this page to see an example.
+        </p>
+    </div>
+</div>
+<div style="height: 100vh"></div>
+<div class="card mb-4">
+    <div class="card-body">When scrolling, the navigation stays at the top of the page. This is the end of the static navigation demo.</div>
+</div>')
+ 5 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-19 11:25:19 --> Undefined property: Modules\dashboard\Controllers\Dashboard::$Views
+in ROOTPATH\Modules\dashboard\Controllers\Dashboard.php on line 30.
+ 1 ROOTPATH\Modules\dashboard\Controllers\Dashboard.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Modules\\dashboard\\Controllers\\Dashboard::$Views', 'ROOTPATH\\Modules\\dashboard\\Controllers\\Dashboard.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(896): Modules\dashboard\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(Modules\dashboard\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
