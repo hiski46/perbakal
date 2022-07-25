@@ -13,4 +13,6 @@ $routes->group('dashboard', ['namespace' => 'Modules\dashboard\Controllers'], fu
 $routes->group('baner', ['namespace' => 'Modules\dashboard\Controllers'], function ($routes) {
     $routes->get('/', 'Baner::index');
     $routes->get('(:any)', 'Baner::$1');
+    $routes->post('/', 'Baner::index');
+    $routes->post('(:any)', 'Baner::$1');
 });

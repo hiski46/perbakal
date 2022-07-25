@@ -3,6 +3,7 @@
 namespace Modules\dashboard\Controllers;
 
 use Modules\dashboard\Controllers\Dashboard;
+use CodeIgniter\Files\File;
 
 class Baner extends Dashboard
 {
@@ -20,7 +21,7 @@ class Baner extends Dashboard
     {
         $html = '<div class="row"> 
                     <div class="col-12 col-md-6">';
-        $html .= form_open('', ['id' => 'baner-form']);
+        $html .= form_open_multipart(base_url('baner/save'), ['id' => 'baner-form']);
         $html .= form_label('Gambar :', '', ['class' => 'form-label']);
         $html .= form_input(['name' => 'file_baner', 'id' => 'file_baner', 'class' => 'form-control', 'onchange' => 'previewFile(this)'], '', '', 'file');
         $html .= '<div class="">' . form_label('Text Baner :', '', ['class' => 'form-label mt-3']);
@@ -37,7 +38,7 @@ class Baner extends Dashboard
                     file_baner: {
                         required: true,
                         extension: "jpg|png|jpeg",
-                        filesize: 5242880,
+                        
                     },
                     text: {
                         required: false,
@@ -48,7 +49,7 @@ class Baner extends Dashboard
                     file_baner: {
                         required: "File harus diisi",
                         extension: "File harus berupa ganbar",
-                        filesize : "File maksimal 10MB",
+                        
                     },
                     text: {
                         required: true,
@@ -65,5 +66,21 @@ class Baner extends Dashboard
             'Simpan',
             'modal-lg'
         );
+    }
+
+    public function save()
+    {
+        $img = $this->request->getFile('file_baner');
+
+        if (!$img->hasMoved()) {
+            $filepath = WRITEPATH . 'uploads/' . $img->store();
+
+            $data = ['uploaded_flleinfo' => new File($filepath)];
+
+            return redirect()->to('baner');
+        }
+        $data = ['errors' => 'The file has already been moved.'];
+
+        return redirect()->to('baner');
     }
 }
