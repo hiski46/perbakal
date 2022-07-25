@@ -17,3 +17,15 @@ $routes->group('baner', ['namespace' => 'Modules\dashboard\Controllers'], functi
     $routes->post('(:any)', 'Baner::$1');
     $routes->delete('(:any)', 'Baner::$1');
 });
+$routes->group('kontak_alamat', ['namespace' => 'Modules\dashboard\Controllers'], function ($routes) {
+    $routes->get('/', 'KontakAlamat::index');
+    $routes->get('(:any)', 'KontakAlamat::$1');
+    $routes->post('/', 'KontakAlamat::index');
+    $routes->post('(:any)', 'KontakAlamat::$1');
+    $routes->delete('(:any)', 'KontakAlamat::$1');
+});
+$routes->group('organisasi', ['namespace' => 'Modules\dashboard\Controllers'], function ($routes) {
+    $routes->get('(:any)', 'Organisasi::$1');
+    $routes->post('(:any)', 'Organisasi::$1');
+    $routes->delete('(:any)', 'Organisasi::$1');
+});

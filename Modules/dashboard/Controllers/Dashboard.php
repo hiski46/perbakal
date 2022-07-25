@@ -3,18 +3,21 @@
 namespace Modules\dashboard\Controllers;
 
 use App\Controllers\BaseController;
-use CodeIgniter\Model;
 
 class Dashboard extends BaseController
 {
     protected $ionAuth;
     protected $view;
-    public $BanerModel;
+    protected $BanerModel;
+    protected $KontakAlamatModel;
+    protected $OrganisasiModel;
     function __construct()
     {
         $this->view = 'Modules\dashboard\Views';
         $this->ionAuth = new \IonAuth\Libraries\IonAuth();
         $this->BanerModel = new \Modules\dashboard\Models\ModelBaner();
+        $this->KontakAlamatModel = new \Modules\dashboard\Models\ModelKontakAlamat();
+        $this->OrganisasiModel = new \Modules\dashboard\Models\ModelOrganisasi();
     }
 
     public function rander($html)

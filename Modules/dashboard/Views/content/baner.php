@@ -1,7 +1,8 @@
 <div>
     <h1 class="mt-4">Baner</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="<?= base_url('dashboard') ?>">Dashboard</a></li>
+        <li class="breadcrumb-item">Home</li>
         <li class="breadcrumb-item active">Baner</li>
     </ol>
     <div class="card mb-4">

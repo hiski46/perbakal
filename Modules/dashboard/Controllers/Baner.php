@@ -3,7 +3,6 @@
 namespace Modules\dashboard\Controllers;
 
 use Modules\dashboard\Controllers\Dashboard;
-use CodeIgniter\Files\File;
 
 class Baner extends Dashboard
 {
@@ -111,7 +110,7 @@ class Baner extends Dashboard
                   }
             });</script>';
         return $this->modal(
-            'Tambah Baner',
+            'Edit Baner',
             $html,
             "update()",
             'primary',
@@ -122,7 +121,7 @@ class Baner extends Dashboard
     public function modalHapus($id)
     {
         return $this->modal(
-            'Tambah Baner',
+            'Hapus Baner',
             'Apakah Anda yakin menghapus Baner ?',
             "deleteBaner(" . $id . ")",
             'danger',
