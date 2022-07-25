@@ -15,4 +15,5 @@ $routes->group('baner', ['namespace' => 'Modules\dashboard\Controllers'], functi
     $routes->get('(:any)', 'Baner::$1');
     $routes->post('/', 'Baner::index');
     $routes->post('(:any)', 'Baner::$1');
+    $routes->delete('(:any)', 'Baner::$1');
 });

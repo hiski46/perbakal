@@ -3,17 +3,18 @@
 namespace Modules\dashboard\Controllers;
 
 use App\Controllers\BaseController;
-
-
+use CodeIgniter\Model;
 
 class Dashboard extends BaseController
 {
     protected $ionAuth;
     protected $view;
+    public $BanerModel;
     function __construct()
     {
         $this->view = 'Modules\dashboard\Views';
         $this->ionAuth = new \IonAuth\Libraries\IonAuth();
+        $this->BanerModel = new \Modules\dashboard\Models\ModelBaner();
     }
 
     public function rander($html)
@@ -43,7 +44,7 @@ class Dashboard extends BaseController
             . '</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button onclick="' . $aksi . '" type="button" class="btn btn-' . $warna . '">' . $tombol . '</button>
+                <button onclick="' . $aksi . '" type="button" data-bs-dismiss="modal" class="btn btn-' . $warna . '">' . $tombol . '</button>
             </div>
         </div>
     </div>';
