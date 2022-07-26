@@ -80,4 +80,70 @@ class Organisasi extends Dashboard
         }
         return redirect()->to('organisasi/logo');
     }
+
+    public function visi_misi()
+    {
+        if (!$this->ionAuth->loggedIn()) {
+            return redirect()->to('/auth/login');
+        }
+
+
+        $data['visi'] = $this->data_organisasi['visi'];
+        $data['misi'] = $this->data_organisasi['misi'];
+        $this->rander(view("$this->view\content\\visi_misi", $data));
+    }
+
+    public function saveVisiMisi()
+    {
+        $visi = $this->request->getPost('visi');
+        $misi = $this->request->getPost('misi');
+
+        $data['visi'] = $visi;
+        $data['misi'] = $misi;
+
+        $this->OrganisasiModel->update(1, $data);
+        return redirect()->to('organisasi/visi_misi');
+    }
+
+    public function modalSaveVisiMisi()
+    {
+        return $this->modal(
+            'Simpan Perubahan',
+            'Apakah Anda yakin ingin menyimpan perubahan ?',
+            'saveVisiMisi()',
+            'primary',
+            'Simpan',
+        );
+    }
+
+    public function tentang()
+    {
+        if (!$this->ionAuth->loggedIn()) {
+            return redirect()->to('/auth/login');
+        }
+        $data['tentang'] = $this->data_organisasi['tentang'];
+        $this->rander(view("$this->view\content\\tentang", $data));
+    }
+
+    public function modalUbahTentang()
+    {
+        return $this->modal(
+            'Simpan Perubahan',
+            'Apakah Anda yakin ingin menyimpan perubahan ?',
+            'saveTentang()',
+            'primary',
+            'Simpan',
+        );
+    }
+
+    public function saveTentang()
+    {
+        $tentang = $this->request->getPost('tentang');
+
+
+        $data['tentang'] = $tentang;
+
+        $this->OrganisasiModel->update(1, $data);
+        return redirect()->to('organisasi/tentnag');
+    }
 }
