@@ -11,6 +11,9 @@ class Dashboard extends BaseController
     protected $BanerModel;
     protected $KontakAlamatModel;
     protected $OrganisasiModel;
+    protected $KepengurusModel;
+    protected $KepengurusanModel;
+    protected $AnggotaModel;
     function __construct()
     {
         $this->view = 'Modules\dashboard\Views';
@@ -18,6 +21,8 @@ class Dashboard extends BaseController
         $this->BanerModel = new \Modules\dashboard\Models\ModelBaner();
         $this->KontakAlamatModel = new \Modules\dashboard\Models\ModelKontakAlamat();
         $this->OrganisasiModel = new \Modules\dashboard\Models\ModelOrganisasi();
+        $this->KepengurusanModel = new \Modules\dashboard\Models\ModelKepengurusan();
+        $this->AnggotaModel = new \Modules\dashboard\Models\ModelAnggota();
     }
 
     public function rander($html)
@@ -36,7 +41,7 @@ class Dashboard extends BaseController
 
     public function modal($title, $isi, $aksi, $warna, $tombol, $size = NULL)
     {
-        $html = '<div class="modal-dialog ' . $size . '">
+        $html = '<div class="modal-dialog ' . $size . ' modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">' . $title . '</h5>

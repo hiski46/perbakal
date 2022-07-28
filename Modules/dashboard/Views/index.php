@@ -16,6 +16,9 @@
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
 
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
 
 </head>
 
@@ -78,7 +81,7 @@
                                     <a class="nav-link" href="<?= base_url('organisasi/logo') ?>">Logo</a>
                                 </nav>
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="<?= base_url('baner') ?>">Pengurus</a>
+                                    <a class="nav-link" href="<?= base_url('pengurus') ?>">Pengurus</a>
                                 </nav>
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="<?= base_url('organisasi/visi_misi') ?>">Visi Misi</a>

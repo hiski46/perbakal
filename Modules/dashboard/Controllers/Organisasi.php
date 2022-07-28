@@ -139,11 +139,9 @@ class Organisasi extends Dashboard
     public function saveTentang()
     {
         $tentang = $this->request->getPost('tentang');
-
-
         $data['tentang'] = $tentang;
 
         $this->OrganisasiModel->update(1, $data);
-        return redirect()->to('organisasi/tentnag');
+        return redirect()->to('organisasi/tentang');
     }
 }

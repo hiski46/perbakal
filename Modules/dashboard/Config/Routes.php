@@ -29,3 +29,10 @@ $routes->group('organisasi', ['namespace' => 'Modules\dashboard\Controllers'], f
     $routes->post('(:any)', 'Organisasi::$1');
     $routes->delete('(:any)', 'Organisasi::$1');
 });
+$routes->group('pengurus', ['namespace' => 'Modules\dashboard\Controllers'], function ($routes) {
+    $routes->get('/', 'Pengurus::index');
+    $routes->get('(:any)', 'Pengurus::$1');
+    $routes->post('/', 'Pengurus::index');
+    $routes->post('(:any)', 'Pengurus::$1');
+    $routes->delete('(:any)', 'Pengurus::$1');
+});
