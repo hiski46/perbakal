@@ -36,3 +36,10 @@ $routes->group('pengurus', ['namespace' => 'Modules\dashboard\Controllers'], fun
     $routes->post('(:any)', 'Pengurus::$1');
     $routes->delete('(:any)', 'Pengurus::$1');
 });
+$routes->group('berita', ['namespace' => 'Modules\dashboard\Controllers'], function ($routes) {
+    $routes->get('/', 'Berita::index');
+    $routes->get('(:any)', 'Berita::$1');
+    $routes->post('/', 'Berita::index');
+    $routes->post('(:any)', 'Berita::$1');
+    $routes->delete('(:any)', 'Berita::$1');
+});

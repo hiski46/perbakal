@@ -14,6 +14,7 @@ class Dashboard extends BaseController
     protected $KepengurusModel;
     protected $KepengurusanModel;
     protected $AnggotaModel;
+    protected $BeritaModel;
     function __construct()
     {
         $this->view = 'Modules\dashboard\Views';
@@ -23,11 +24,13 @@ class Dashboard extends BaseController
         $this->OrganisasiModel = new \Modules\dashboard\Models\ModelOrganisasi();
         $this->KepengurusanModel = new \Modules\dashboard\Models\ModelKepengurusan();
         $this->AnggotaModel = new \Modules\dashboard\Models\ModelAnggota();
+        $this->BeritaModel = new \Modules\dashboard\Models\ModelBerita();
     }
 
     public function rander($html)
     {
         $data['html'] = $html;
+        $data['logo'] = $this->OrganisasiModel->find(1)['logo'];
         echo view($this->view . '\index', $data);
     }
 
