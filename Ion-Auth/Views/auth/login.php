@@ -79,8 +79,8 @@
 
   <main class="form-signin w-100 m-auto">
     <?php echo form_open('auth/login'); ?>
-    <img class="mb-4" src="<?= base_url('assets/assets/brand/bootstrap-logo.svg') ?>" alt="" width="72" height="57">
-    <h1><?php echo lang('Auth.login_heading'); ?></h1>
+    <img class="mb-4" src="<?= base_url('upload/1658765624_48f62a3dc5dda42a81c5.png') ?>" alt="" width="72" height="57">
+    <h1>Dashboard Perbakal</h1>
     <p><?php echo lang('Auth.login_subheading'); ?></p>
 
     <div id="infoMessage"><?php echo $message; ?></div>

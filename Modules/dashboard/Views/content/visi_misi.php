@@ -33,17 +33,21 @@
 </div>
 
 <script>
-    ClassicEditor
-        .create(document.querySelector('#visi'))
-        .catch(error => {
-            console.error(error);
-        });
+    // ClassicEditor
+    //     .create(document.querySelector('#visi'))
+    //     .catch(error => {
+    //         console.error(error);
+    //     });
 
-    ClassicEditor
-        .create(document.querySelector('#misi'))
-        .catch(error => {
-            console.error(error);
-        });
+    // ClassicEditor
+    //     .create(document.querySelector('#misi'))
+    //     .catch(error => {
+    //         console.error(error);
+    //     });
+    $(document).ready(function() {
+        $('#visi').summernote()
+        $('#misi').summernote()
+    })
 
     function modalSaveVisiMisi() {
         $.ajax({

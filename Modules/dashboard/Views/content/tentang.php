@@ -24,11 +24,14 @@
 </div>
 
 <script>
-    ClassicEditor
-        .create(document.querySelector('#tentang'))
-        .catch(error => {
-            console.error(error);
-        });
+    // ClassicEditor
+    //     .create(document.querySelector('#tentang'))
+    //     .catch(error => {
+    //         console.error(error);
+    //     });
+    $(document).ready(function() {
+        $('#tentang').summernote()
+    })
 
     function modalUbahTentang() {
         $.ajax({
