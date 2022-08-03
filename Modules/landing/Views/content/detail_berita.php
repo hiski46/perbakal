@@ -21,7 +21,7 @@
     </div>
     <div class="row">
         <div class="col">
-            <?= $berita['isi'] ?>
+            <div class="text-dark"><?= $berita['isi'] ?></div>
         </div>
     </div>
 </div>

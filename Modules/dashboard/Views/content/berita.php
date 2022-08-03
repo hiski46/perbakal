@@ -79,7 +79,7 @@
     function deleteBerita(id) {
         $.ajax({
             url: "<?= base_url('berita/hapus') ?>/" + id,
-            method: 'DELETE',
+            method: 'GET',
             success: function(html) {
                 location.reload()
             }

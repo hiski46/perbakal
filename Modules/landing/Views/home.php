@@ -124,12 +124,8 @@
                     <h1 class="display-6 mb-0">Pengurus</h1>
                 </div>
             </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <!-- <p class="mb-0">
-                        Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-                        diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-                        lorem sit clita duo justo magna dolore erat amet
-                    </p> -->
+            <div class="col-lg-6 text-lg-end wow fadeInUp" data-wow-delay="0.3s">
+                <a class="btn btn-primary py-3 px-5" href="<?= base_url('landing_page/pengurus') ?>">Semua Pengurus</a>
             </div>
         </div>
         <div class="row g-4">
@@ -183,7 +179,7 @@
                 </div>
             </div>
             <div class="col-lg-6 text-lg-end wow fadeInUp" data-wow-delay="0.3s">
-                <a class="btn btn-primary py-3 px-5" href="">Semua Berita</a>
+                <a class="btn btn-primary py-3 px-5" href="<?= base_url('landing_page/berita') ?>">Semua Berita</a>
             </div>
         </div>
         <div class="row g-4 justify-content-center">

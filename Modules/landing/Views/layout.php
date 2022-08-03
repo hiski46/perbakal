@@ -95,7 +95,7 @@
     <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h1 class="text-white mb-4">
                         <img src="<?= base_url('upload/' . $organisasi['logo']) ?>" alt="" style="height:5vh;"> PERBAKAL
                     </h1>
@@ -106,7 +106,7 @@
 
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="text-light mb-4">Alamat</h4>
                     <p>
                         <!-- <i class="fa fa-map-marker-alt me-3"></i>LBH Nasional Jl. KiMaja No.172 WayHalim Bandarlampung -->
@@ -117,14 +117,14 @@
                     <!-- <p><i class="fa fa-envelope me-3"></i>perbakal@example.com</p> -->
                     <p><i class="fa fa-envelope me-3"></i><?= $kontak_alamat['email'] ?></p>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="text-light mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="tentang.html">Tentang Kami</a>
-                    <a class="btn btn-link" href="kontak.html">Kontak Kami</a>
-                    <a class="btn btn-link" href="struktur.html">Struktur Organisasi</a>
-                    <a class="btn btn-link" href="berita.html">Berita Artikel</a>
+                    <a class="btn btn-link" href="<?= base_url('landing_page/tentang') ?>">Tentang Kami</a>
+                    <a class="btn btn-link" href="<?= base_url('landing_page/tentang') ?>">Kontak Kami</a>
+                    <a class="btn btn-link" href="<?= base_url('landing_page/tentang') ?>">Struktur Organisasi</a>
+                    <a class="btn btn-link" href="<?= base_url('landing_page/tentang') ?>">Berita Artikel</a>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <!-- <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Hubungi Kami</h4>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px">
@@ -133,7 +133,7 @@
                             SignUp
                         </button>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="container-fluid copyright">
@@ -142,12 +142,15 @@
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         &copy; <a href="#">PERBAKAL</a>, All Right Reserved.
                     </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                        <br />Distributed By:
-                        <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-                    </div>
+                    <!-- <div class="col-md-6">
+                        <a href="https://wa.widget.web.id/81395c" target="_blank"><img src="https://wa.widget.web.id/assets/img/tombol-wa.png"></a>
+                    </div> -->
+                    <!-- <div class="col-md-6 text-center text-md-end"> -->
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    <!-- Designed By <a href="https://htmlcodex.com">HTML Codex</a> -->
+                    <!-- <br />Distributed By: -->
+                    <!-- <a href="https://themewagon.com" target="_blank">ThemeWagon</a> -->
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
@@ -156,6 +159,9 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -167,6 +173,31 @@
 
     <!-- Template Javascript -->
     <script src="<?= base_url('/landing') ?>/js/main.js"></script>
+
+    <!-- GetButton.io widget -->
+    <script type="text/javascript">
+        (function() {
+            var options = {
+                whatsapp: "+6285896224113", // WhatsApp number
+                call_to_action: "Kirimi kami pesan", // Call to action
+                button_color: "#FF6550", // Color of button
+                position: "left", // Position may be 'right' or 'left'
+            };
+            var proto = 'https:',
+                host = "getbutton.io",
+                url = proto + '//static.' + host;
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function() {
+                WhWidgetSendButton.init(host, proto, options);
+            };
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+    <!-- /GetButton.io widget -->
 </body>
 
 </html>

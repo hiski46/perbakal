@@ -23,17 +23,17 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-5">
-            <div class="col-4">
+            <div class="col-md-4">
                 <div class="list-group" id="list-tab" role="tablist">
-                    <a class="list-group-item list-group-item-action active" id="list-home-list" id-data="2" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Ketua</a>
-                    <a class="list-group-item list-group-item-action" id="list-home-list" id-data="5" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Sekretaris</a>
-                    <a class="list-group-item list-group-item-action" id="list-home-list" id-data="8" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Bendahara</a>
+                    <a class="list-group-item list-group-item-action active" id="list-home-list" id-data="2" data-bs-toggle="list" href="#nav-tabContent" role="tab" aria-controls="list-home">Ketua</a>
+                    <a class="list-group-item list-group-item-action" id="list-home-list" id-data="5" data-bs-toggle="list" href="#nav-tabContent" role="tab" aria-controls="list-home">Sekretaris</a>
+                    <a class="list-group-item list-group-item-action" id="list-home-list" id-data="8" data-bs-toggle="list" href="#nav-tabContent" role="tab" aria-controls="list-home">Bendahara</a>
                     <?php foreach ($kepengurusan_sie as $kep) { ?>
-                        <a class="list-group-item list-group-item-action" id="list-home-list" id-data="<?= $kep['id'] ?>" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home"><?= $kep['jabatan'] ?></a>
+                        <a class="list-group-item list-group-item-action" id="list-home-list" id-data="<?= $kep['id'] ?>" data-bs-toggle="list" href="#nav-tabContent" role="tab" aria-controls="list-home"><?= $kep['jabatan'] ?></a>
                     <?php } ?>
                 </div>
             </div>
-            <div class="col-8">
+            <div class="col-md-8">
                 <div class="tab-content" id="nav-tabContent">
 
                 </div>
@@ -53,10 +53,15 @@
                     id: id
                 },
                 success: function(data) {
+                    if ($(document).width() < 768) {
+                        $('html, body').animate({
+                            scrollTop: $("#nav-tabContent").offset().top
+                        }, 2000);
+                    }
                     $('#nav-tabContent').html(data);
                 }
             })
         })
-    })
+    });
 </script>
 <?= $this->endSection() ?>
